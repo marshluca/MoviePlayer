@@ -15,6 +15,10 @@
 		3228349D15A5417F00E3C085 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3228349C15A5417F00E3C085 /* AppDelegate.m */; };
 		322834A015A5417F00E3C085 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3228349E15A5417F00E3C085 /* MainStoryboard.storyboard */; };
 		322834A315A5417F00E3C085 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322834A215A5417F00E3C085 /* ViewController.m */; };
+		32BF115B15AD18E2008E828E /* MyMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BF115A15AD18E2008E828E /* MyMovieViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		32BF115F15AD1933008E828E /* MyOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BF115E15AD1933008E828E /* MyOverlayViewController.m */; };
+		32BF116215AD1960008E828E /* MoviePlayerUserPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BF116115AD1960008E828E /* MoviePlayerUserPrefs.m */; };
+		32BF116E15AD19CF008E828E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BF116D15AD19CF008E828E /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,13 @@
 		3228349F15A5417F00E3C085 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		322834A115A5417F00E3C085 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		322834A215A5417F00E3C085 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		32BF115915AD18E2008E828E /* MyMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMovieViewController.h; sourceTree = "<group>"; };
+		32BF115A15AD18E2008E828E /* MyMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMovieViewController.m; sourceTree = "<group>"; };
+		32BF115D15AD1933008E828E /* MyOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOverlayViewController.h; sourceTree = "<group>"; };
+		32BF115E15AD1933008E828E /* MyOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOverlayViewController.m; sourceTree = "<group>"; };
+		32BF116015AD1960008E828E /* MoviePlayerUserPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerUserPrefs.h; sourceTree = "<group>"; };
+		32BF116115AD1960008E828E /* MoviePlayerUserPrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerUserPrefs.m; sourceTree = "<group>"; };
+		32BF116D15AD19CF008E828E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32BF116E15AD19CF008E828E /* MediaPlayer.framework in Frameworks */,
 				3228348D15A5417E00E3C085 /* UIKit.framework in Frameworks */,
 				3228348F15A5417E00E3C085 /* Foundation.framework in Frameworks */,
 				3228349115A5417E00E3C085 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +79,7 @@
 		3228348B15A5417E00E3C085 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32BF116D15AD19CF008E828E /* MediaPlayer.framework */,
 				3228348C15A5417E00E3C085 /* UIKit.framework */,
 				3228348E15A5417E00E3C085 /* Foundation.framework */,
 				3228349015A5417E00E3C085 /* CoreGraphics.framework */,
@@ -77,6 +90,7 @@
 		3228349215A5417E00E3C085 /* MoviePlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				32BF115815AD18E2008E828E /* MoviePlayer */,
 				3228349B15A5417F00E3C085 /* AppDelegate.h */,
 				3228349C15A5417F00E3C085 /* AppDelegate.m */,
 				3228349E15A5417F00E3C085 /* MainStoryboard.storyboard */,
@@ -96,6 +110,20 @@
 				3228349A15A5417F00E3C085 /* MoviePlayerDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32BF115815AD18E2008E828E /* MoviePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				32BF115915AD18E2008E828E /* MyMovieViewController.h */,
+				32BF115A15AD18E2008E828E /* MyMovieViewController.m */,
+				32BF115D15AD1933008E828E /* MyOverlayViewController.h */,
+				32BF115E15AD1933008E828E /* MyOverlayViewController.m */,
+				32BF116015AD1960008E828E /* MoviePlayerUserPrefs.h */,
+				32BF116115AD1960008E828E /* MoviePlayerUserPrefs.m */,
+			);
+			name = MoviePlayer;
+			path = ../../MoviePlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +191,9 @@
 				3228349915A5417F00E3C085 /* main.m in Sources */,
 				3228349D15A5417F00E3C085 /* AppDelegate.m in Sources */,
 				322834A315A5417F00E3C085 /* ViewController.m in Sources */,
+				32BF115B15AD18E2008E828E /* MyMovieViewController.m in Sources */,
+				32BF115F15AD1933008E828E /* MyOverlayViewController.m in Sources */,
+				32BF116215AD1960008E828E /* MoviePlayerUserPrefs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
